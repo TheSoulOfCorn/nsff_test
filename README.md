@@ -80,7 +80,7 @@ I didn't get much information for how to select your original data, and I did ru
 ### 4. A SUMMARY OF RENDERING WITH NSFF   
 Nsff provides additional dimensions for neural radiance rendering. The original project page did not provide a thorough discussion of extension of renderings. Though trivial, a summary table may help you better understand what’s going on about this model with a better visualization results.
 
-![Picture1](https://user-images.githubusercontent.com/68495667/202873024-fcc04e7e-454b-4d36-8ade-b20e2dc9e571.png)
+![Picture2](https://user-images.githubusercontent.com/68495667/202875722-47436ef0-a4fa-455e-8d23-fbb6f2de7048.png)
 
 This figure includes almost all cases of rendering (not discussing visualization of other (middle) outputs like model predicted flow).   
 Focusing on the position number/position interp/time, we discuss all different situations here.   
@@ -102,4 +102,11 @@ Focusing on the position number/position interp/time, we discuss all different s
 ##### __【case \*】__ As discussed, `interpY` decides if you really needs interpolation for the time, we borrow from the original repo for the splat rendering for this.
 ##### __【case \#】__ We currently have no time interpolations for this case, but only space-interp. A visually non-smooth-time training set will manifest itself regarding the rendering result: the camera is smoothly roaming, but the dynamic objects acutally not. This is soothed if your training set is essentially visually smooth. All in all, just for your information that the splat rendering is not arriving here.
 
-We do not discuss rendering only dynamic here though we may. It gives a black/white or whatever background image output which is not realistic. You could definitely try! In the `rendering.py` file I already prepared all you need to know, an easy implementation to try by yourself.
+We do not discuss rendering only dynamic here though we may. It gives a black/white or whatever background image output which is not realistic. You could definitely try! In the `rendering.py` file I already prepared all you need to know, an easy implementation to try by yourself.   
+The discussion above just covers every case of rendering, though with all kinds of different names elsewhere. Basically you always match that somewhere on this figure.   
+My apologies that some evaluation settings are implicit still, but I make it all clear in the `.py` files. 
+
+## RESULTS_1 (tf board for kid_run)
+
+## RESULTS_1 (rendering for kid_run)
+
