@@ -66,7 +66,7 @@ please make sure your evaluation settings are in harmony with your training (e.g
 Refer to [nsff_pl](https://github.com/kwea123/nsff_pl) for a first round optimization based on the original paper implementation. I followed a few of that and it's working pretty well.
 
 ### 2. WHAT'S NEW TO THE [NSFF_PL](https://github.com/kwea123/nsff_pl) REPO?   
-A second round optimization. several bug fixed, full notation for everything. Much more readable. I also optimized some unnecessary settings with basically same result. BTW, A hand-writing notes for nsff paper is also updated just for your interest..
+A second round optimization. several bug fixed, full notation for everything. Much more readable. I also optimized some unnecessary settings with basically same result. BTW, A hand-writing notes for nsff paper is also updated just for your interest.. (though this is not an authentic implementation!)
 
 ### 3. RECOMMENDATIONS FOR YOUR DATASET
 I didn't get much information for how to select your original data, and I did run into problems with my custom datasets.. Here I pave the way:   
