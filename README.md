@@ -12,3 +12,71 @@ More testing on different settings (fix time/view/neither, calibrate camera path
 This will be my final project presentation. Nerf/mipnerf will be part of my paper presentation instead.
 
 
+#### before start
+> This is a neural scene flow fields implementation based on torch/torchlightning. This implementation could be seen as a fork of [nsff_pl](https://github.com/kwea123/nsff_pl) and [nerf_mipnerf](https://github.com/TheSoulOfCorn/nerf_mipnerf_test). Updates/optimizations will be detailed as follow.   
+> Hardware: WSL2 on Windows 11, RTX 3070. Memory consumption is less than 10 GB using my default setting.
+
+## RUNNING NSFF
+### 1. create environment
+> run   
+`conda create -n nsff python=3.7` then `conda activate nsff`   
+`pip install -r requirements.txt`   
+better check the sanity of the GPU status before going next step, as I developed in WSL2 so the environment setting may be not as universal.
+
+### 2. prepare your data   
+This repo follows the recommended steps of [nsff_pl](https://github.com/kwea123/nsff_pl). Three borrowed tools are as following:   
+
+Detectron2: we use [COLMAP](https://github.com/colmap/colmap) to generate camera intrinsic and extrinsic, assuming the scene is static at most. This is not true for dynamic scenes, and we may want to filter out the dynamic parts first and then do the [COLMAP](https://github.com/colmap/colmap) job. We use maskrcnn from [detectron2](https://github.com/facebookresearch/detectron2), which already has pretrained model for our task. I have notes in the code illustrating each step.   
+> install detectron2 `python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.8/index.html`.   
+> you also need to install [COLMAP](https://github.com/colmap/colmap).
+
+RAFT: NSFF training requires guidance of 2D optical flows, we use [RAFT](https://github.com/princeton-vl/RAFT) here.   
+> Download [raft-things.pth](https://drive.google.com/drive/folders/1sWDsfuZ3Up38EUQt7-JDTT1HcGHuJgvT) and put it in `third_party/flow/models/`.   
+
+DPT: NSFF training requires guidance of predicted depth, we use [DPT](https://github.com/intel-isl/DPT) here.   
+> Download the model [weights](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_large-midas-2f21e586.pt) and put it in `third_party/depth/weights/`.   
+
+Following the original repo, all the data preparation steps are summarized to the `preprocess.py`. user-friendly notes are attached to this version. Please prepare your data as following steps. Refer to my notations if any confusion.   
+
+> create your training dataset root directory (`test`), then create a folder named `frames`, put your original training images in `frames`. (the images should be named  time-orderly)   
+
+> according to your own dataset, modify the `DYNAMIC_CATEGORIES` variable in `third_party/predict_mask.py` to the dynamic classes in your data.
+
+> `python preprocess.py --root_dir <path/to/your_root_dir>`   
+
+Warning in this step:   
+
+I do not know why sometimes it's not creating full training directory, the final dir should have several folders for your data, you may doublecheck the `preprocess.py` as I noted, or `README.md` from [nsff_pl](https://github.com/kwea123/nsff_pl) to ensure your training set is fully built. After masking, the COLMAP sometimes cannot build all cameras. This is lethal and a problem I ran into..
+
+Based on my own implementation, I may have you some recommendations about the dataset preparation in the discussion part. I HIGHLY RECOMMEND you to read them first to avoid wasting time on training nonsense.
+
+### 3. train   
+
+Check the `opt.py` for options for training, modify the `quick_train.sh`, and `bash quick_train.sh`.   
+the checkpoints will be saved in `./ckpts`, tfevents file in `./logs`.
+
+### 4. evaluation
+
+Check the `eval.py` for options for evaluation, modify the `quick_eval.sh`, and `bash quick_eval.sh`.   
+please make sure your evaluation settings are in harmony with your training (e.g. Don't have a 60 pos_embedding for training while trying to recover a 30 pos_embedding model). See the discussion part for options in the evaluation.
+
+
+## DISCUSSION
+### 1. WHAT'S NEW TO THE PAPER?   
+Refer to [nsff_pl](https://github.com/kwea123/nsff_pl) for a first round optimization based on the original paper implementation. I followed a few of that and it's working pretty well.
+
+### 2. WHAT'S NEW TO THE [NSFF_PL](https://github.com/kwea123/nsff_pl) REPO?   
+A second round optimization. several bug fixed, full notation for everything. Much more readable. I also optimized some unnecessary settings with basically same result. BTW, A hand-writing notes for nsff paper is also updated just for your interest..
+
+### 3. RECOMMENDATIONS FOR YOUR DATASET
+I didn't get much information for how to select your original data, and I did run into problems with my custom datasets.. Here I pave the way:   
+
+1. At least 30 frames, as recommended anywhere. This is not necessarily leading to a higher-frame-number-better-result, but longer training time of course.
+
+2. Question - Can I try intricate dynamic/movements? My answer: If your dataset contains very complicated movements from objects, I recommend you to increase the frame number, because the flow captures the dynamic anyway. But this actually leads to a trade-off given a budget frame number: Can I add more dynamic parts for my scene, or just increase the continuity for my current course of time?
+
+3. Question - What's the requirement for continuity between frames? My answer: If you export frames from a video with a budget training frame number, you may be in a dilemma that: should I have a long-duration-low-frame-rate training, or short-duration-high-frame-rate training? The extreme of the former is the model captures nothing at all, it sees all frames as no continuity. The extreme of the latter is the model degrades to a pure nerf model, or worse (single-image train). From my experience, I usually limit the scene duration first as: don't contain too many movements for reconstructions if budgets are low, and shorten the duration even more if the static background is not 'static' (camera roaming). Then evenly distribute the frames with the duration. This procedure works just fine for my implementation. I didn't dig into any other details about this. If someone knows any systematic discussions/publications of it please let me know! thanks.   
+
+### 4. A SUMMARY OF RENDERING WITH NSFF   
+Nsff provides additional dimensions for neural radiance rendering. The original project page did not provide a thorough discussion of extension of renderings. Though trivial, a summary table may help you better understand what’s going on about this model with a better visualization results.
+
