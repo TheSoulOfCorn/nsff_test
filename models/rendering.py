@@ -433,7 +433,7 @@ def interpolate(results_t, results_tp1, dt, K, c2w, img_wh):
     # (2,CN) projected screen loc 
     uvs_bw = uvds_bw[:2] / uvds_bw[2]
     # (2,CN) -> (2,C,N)
-    uvs_bw = rearrange(uvs_bw, 'c (C N) -> c C N', n1=N_rays, n2=N_samples)
+    uvs_bw = rearrange(uvs_bw, 'c (C N) -> c C N', C=N_rays, N=N_samples)
     # (2,C,N) -> (N,H,W,2)
     uvs_bw = rearrange(uvs_bw, 'c (h w) N -> N h w c', w=w, h=h)
     # (N,H,W,2) -> (N,2,H,W) optical flow backward
