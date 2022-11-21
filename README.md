@@ -107,6 +107,28 @@ The discussion above just covers every case of rendering, though with all kinds 
 My apologies that some evaluation settings are implicit still, but I make it all clear in the `.py` files. 
 
 ## RESULTS_1 (tf board for kid_run)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202946233-e6bcef93-3630-4c4a-a5c5-68f0f6a40609.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202946269-cc399870-fc43-4449-937e-4bede993803c.gif", width="40%">
+  <br>
+  <sup>temp</sup>
+  
+  
+</p>
+
+
 
 ## RESULTS_1 (rendering for kid_run)
+
+## RESULTS_2 (tf board for girl_dog)
+
+## RESULTS_2 (rendering for girl_dog)
+
+## RESULTS_3 (tf board for woman_dog)
+
+## RESULTS_3 (rendering for woman_dog)
+
+## RESULTS_4 (tf board for car) (failed case)
+
+## RESULTS_4 (rendering for car) (failed case)
 
