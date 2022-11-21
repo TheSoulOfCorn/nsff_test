@@ -181,6 +181,21 @@ My apologies that some evaluation settings are implicit still, but I make it all
 
 ## RESULTS_1 (tf board for kid_run)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202994672-51d00a87-c7c3-40ef-b5fc-1770cf4c32f4.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202994685-1585e117-2733-4ffd-9a7d-9a434d3b7111.png", width="40%">
+  <br>
+  <sup>train</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202995045-509a9f38-2d17-470a-b4c8-345bfc5b8be3.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202995060-f62f19fb-06ea-49c1-8faa-48200f371032.png", width="40%">
+  <br>
+  <sup>validation</sup>
+</p>
+
+
 ## RESULTS_2 (rendering for girl_dog)
 
 <p align="center">
@@ -241,6 +256,20 @@ My apologies that some evaluation settings are implicit still, but I make it all
 
 ## RESULTS_2 (tf board for girl_dog)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202996210-15dd9496-e6cf-4ffa-b6ac-c0ca6250b66e.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202996219-6d04bc93-abbc-40dd-9106-b3d3c3ff8452.png", width="40%">
+  <br>
+  <sup>train</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202996276-afdd9e33-ebac-4dd0-be54-b91dbe0e19f1.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202996288-d15ebf69-cb69-4b43-901c-01db37dc4233.png", width="40%">
+  <br>
+  <sup>validation</sup>
+</p>
+
 ## RESULTS_3 (rendering for woman_dog)
 
 <p align="center">
@@ -287,6 +316,20 @@ My apologies that some evaluation settings are implicit still, but I make it all
 
 ## RESULTS_3 (tf board for woman_dog)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202996746-c5065d39-c2ad-48d7-8197-8e41cc422eeb.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202996754-8681f21b-7161-44da-89a5-e25d4a6d2e31.png", width="40%">
+  <br>
+  <sup>train</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202996802-cbc33b05-12f9-4b7f-97c8-b34f7982db30.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202996810-28060052-170d-4aa3-b1d4-5b5813b05641.png", width="40%">
+  <br>
+  <sup>validation</sup>
+</p>
+
 ## RESULTS_4 (rendering for car) (failed case)
 
 <p align="center">
@@ -297,4 +340,16 @@ My apologies that some evaluation settings are implicit still, but I make it all
 
 ## RESULTS_4 (tf board for car) (failed case)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202997231-f402dae2-e72a-48ba-afcb-58d44ae12f7e.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202997240-596c4016-40de-4595-ad98-f2928f78edd7.png", width="40%">
+  <br>
+  <sup>train</sup>
+</p>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202997298-66cf9ac1-2f0a-4b1f-a455-fab9ca19df4e.png", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202997311-fd3f2a81-494b-472d-8d5e-3c04734838bf.png", width="40%">
+  <br>
+  <sup>validation</sup>
+</p>
