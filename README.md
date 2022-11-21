@@ -107,6 +107,7 @@ The discussion above just covers every case of rendering, though with all kinds 
 My apologies that some evaluation settings are implicit still, but I make it all clear in the `.py` files. 
 
 ## RESULTS_1 (rendering for kid_run)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/68495667/202946233-e6bcef93-3630-4c4a-a5c5-68f0f6a40609.gif", width="40%">
   <img src="https://user-images.githubusercontent.com/68495667/202946269-cc399870-fc43-4449-937e-4bede993803c.gif", width="40%">
@@ -237,30 +238,62 @@ My apologies that some evaluation settings are implicit still, but I make it all
   <br>
   <sup>smooth pos interp with roaming time on whole set (right: depth)</sup>
 </p>
-     
-<p align="center">
-  <img src="", width="40%">
-  <img src="", width="40%">
-  <br>
-  <sup>spiral interp on one position (right: depth)</sup>
-</p>
-     
-<p align="center">
-  <img src="", width="40%">
-  <img src="", width="40%">
-  <br>
-  <sup>spiral interp on one position (right: depth)</sup>
-</p>
-   
-
 
 ## RESULTS_2 (tf board for girl_dog)
 
 ## RESULTS_3 (rendering for woman_dog)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202990546-bc4870c6-9625-4822-a39c-4f8796a99b54.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202990550-76dd26d8-727b-4be5-9c7f-a86ba0190419.gif", width="40%">
+  <br>
+  <sup>test on training frames (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202991096-8ef46d90-34fc-49f7-a2f2-e5163abd19aa.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202991077-622cbf45-20e2-43a2-bdf3-1e678154a3a2.gif", width="40%">
+  <br>
+  <sup>test on training frames, background (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202991361-326d90d4-5127-48fa-892a-44199d75f9a3.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202991397-ad5b32d9-c6a3-4e03-8ecf-56b8cd49cb0e.gif", width="40%">
+  <br>
+  <sup>spiral interp on one position (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202991795-26e1d302-5e7d-4f5f-8f18-9ee880bbe801.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202991814-6f9ae774-1e6d-4ae6-b0a1-08736f28b90f.gif", width="40%">
+  <br>
+  <sup>spiral interp on one position, background (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202992289-559e5f7c-c215-4b5f-9a98-da8d58b4fb87.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202992302-aa6cac15-b52e-492a-beb5-b5a26431989f.gif", width="40%">
+  <br>
+  <sup>fix view with 4 frames interp in each between (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202992818-119b35bc-6eb4-4d86-822e-f188b43422b1.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202992824-e3563f13-c21d-4034-aac7-2280092b1a4d.gif", width="40%">
+  <br>
+  <sup>smooth pos interp with roaming time on whole set (right: depth)</sup>
+</p>
+
 ## RESULTS_3 (tf board for woman_dog)
 
 ## RESULTS_4 (rendering for car) (failed case)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202993234-381256f2-82fe-4f83-b983-e303214395bf.gif", width="40%">
+  <br>
+  <sup>spiral (right: depth)</sup>
+</p>
 
 ## RESULTS_4 (tf board for car) (failed case)
 
