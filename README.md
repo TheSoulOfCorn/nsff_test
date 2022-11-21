@@ -106,29 +106,162 @@ We do not discuss rendering only dynamic here though we may. It gives a black/wh
 The discussion above just covers every case of rendering, though with all kinds of different names elsewhere. Basically you always match that somewhere on this figure.   
 My apologies that some evaluation settings are implicit still, but I make it all clear in the `.py` files. 
 
-## RESULTS_1 (tf board for kid_run)
+## RESULTS_1 (rendering for kid_run)
 <p align="center">
   <img src="https://user-images.githubusercontent.com/68495667/202946233-e6bcef93-3630-4c4a-a5c5-68f0f6a40609.gif", width="40%">
   <img src="https://user-images.githubusercontent.com/68495667/202946269-cc399870-fc43-4449-937e-4bede993803c.gif", width="40%">
   <br>
-  <sup>temp</sup>
-  
-  
+  <sup>test on training frames (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202981065-702f8d3c-0365-46a2-8a6e-3168193b337f.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202980843-96e5f32c-cda3-474c-918b-2ef883e07426.gif", width="40%">
+  <br>
+  <sup>test on training frames, background (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202981301-10923a91-2185-4df8-802d-eda29627f75c.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202981357-f8f70154-20d6-444d-98fb-e9fa2fd2f81c.gif", width="40%">
+  <br>
+  <sup>spiral interp on one position (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202981602-1fdebca4-76db-4b3a-8cbd-36d2a8ed572e.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202981521-840340ac-d1d4-48cb-8155-1a0288fa29a5.gif", width="40%">
+  <br>
+  <sup>spiral interp on one position, background (right: depth)</sup>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202981750-12eb5742-a6f7-4b5b-b726-488d0bb47d81.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202981805-e8e6828d-db33-4e67-965e-41d150e00a85.gif", width="40%">
+  <br>
+  <sup>fix view no interp (right: depth)</sup>
 </p>
 
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202982325-84feb57e-24ce-43c9-84b5-8b6eaa8343d8.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202982525-582a74b5-1a96-4cae-bf15-1b024d7eaee0.gif", width="40%">
+  <br>
+  <sup>fix view with 4 frames interp in each between (right: depth)</sup>
+</p>
 
-## RESULTS_1 (rendering for kid_run)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202982912-eb78d512-1c02-4f7b-b219-c697eb30de5f.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202983033-e48eb916-f37b-4d75-b781-c2e8b09a6b0f.gif", width="40%">
+  <br>
+  <sup>smooth pos interp with roaming time on whole set (right: depth)</sup>
+</p>
 
-## RESULTS_2 (tf board for girl_dog)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202983279-498b8547-4eb2-4e0a-92b8-738076f2580c.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202983287-ab1df55f-edf2-4ac2-952d-9e0fd6c612d5.gif", width="40%">
+  <br>
+  <sup>smooth pos interp with fix time on whole set (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202983705-f6866ec0-8ef1-48c6-a448-358df4bd3664.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202983710-6b9c6535-8c99-4ef7-a3f4-41ba89deaa41.gif", width="40%">
+  <br>
+  <sup>spiral pos interp with roaming time on whole set (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202983969-33876b00-6218-4693-b1b7-55ac599e46be.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202983980-452c3944-b19e-4bfd-a706-a0e7a07460c2.gif", width="40%">
+  <br>
+  <sup>spiral pos interp with fix time on whole set (right: depth)</sup>
+</p>
+
+## RESULTS_1 (tf board for kid_run)
 
 ## RESULTS_2 (rendering for girl_dog)
 
-## RESULTS_3 (tf board for woman_dog)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202984781-9f23e8f4-4ddd-423a-8b32-ec920c389dcd.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202984792-fb4e5a5b-0464-4612-b92a-2524e5732072.gif", width="40%">
+  <br>
+  <sup>test on training frames (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202985245-765ceceb-2ef1-4fb0-8e82-1ae3b9b72f73.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202985267-21f0ad18-cc90-46a5-930e-58ff905f4c27.gif", width="40%">
+  <br>
+  <sup>test on training frames, background (right: depth)</sup>
+</p>
+  
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202985533-620ac809-2342-4d93-bfec-9f3f7eba4df6.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202985542-10ba82a3-2a63-42ea-9b8a-fbd05698827c.gif", width="40%">
+  <br>
+  <sup>spiral interp on one position (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202985975-3806a008-4377-4f39-9798-325d645959b1.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202985959-da07e852-5931-43b2-8fba-c15a3bb97511.gif", width="40%">
+  <br>
+  <sup>spiral interp on one position, background (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202988403-b94ac96b-26b0-4bf1-88ea-efcdef050920.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202988374-baa265a1-8a67-4388-886c-f89c9cb02b9f.gif", width="40%">
+  <br>
+  <sup>fix view with 4 frames interp in each between (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202988947-7853e57f-7e49-412b-8956-c7f2481ead53.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202988953-670a8fcc-422b-47ba-8bcd-09e98590c859.gif", width="40%">
+  <br>
+  <sup>smooth pos interp with fix time on whole set (right: depth)</sup>
+</p>
+  
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202989413-cc3b69d1-630a-4c71-b2d0-0982548e307a.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202989439-ec3dc039-fb89-4742-b847-44cb6f1a8489.gif", width="40%">
+  <br>
+  <sup>smooth pos interp with fix time on whole set, background (right: depth)</sup>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68495667/202989821-d8285d68-20b8-40bf-b3f3-3fa13a308299.gif", width="40%">
+  <img src="https://user-images.githubusercontent.com/68495667/202989826-d6f8a0de-1104-4f84-8ea6-01c08e0cc938.gif", width="40%">
+  <br>
+  <sup>smooth pos interp with roaming time on whole set (right: depth)</sup>
+</p>
+     
+<p align="center">
+  <img src="", width="40%">
+  <img src="", width="40%">
+  <br>
+  <sup>spiral interp on one position (right: depth)</sup>
+</p>
+     
+<p align="center">
+  <img src="", width="40%">
+  <img src="", width="40%">
+  <br>
+  <sup>spiral interp on one position (right: depth)</sup>
+</p>
+   
+
+
+## RESULTS_2 (tf board for girl_dog)
 
 ## RESULTS_3 (rendering for woman_dog)
 
-## RESULTS_4 (tf board for car) (failed case)
+## RESULTS_3 (tf board for woman_dog)
 
 ## RESULTS_4 (rendering for car) (failed case)
+
+## RESULTS_4 (tf board for car) (failed case)
+
 
