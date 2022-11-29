@@ -79,6 +79,8 @@ I didn't get much information for how to select your original data, and I did ru
 
 4. UPDATED 11/29 : more about the dataset. Training data is decisive. If you are extracting frames from videos (instead of taking pictures), please take care of the camera position and dynamic objects. If you have continuous frames with __relatively unmoved camera__ with __dynamic objects do not move a lot__, this over smoothness will result in that the model considers that certain part as background. While dramatic dynamics in your dataset should be avoided for sure, do not take frames having ill camera & object relation as described either. As my result suffers from this problem.
 
+5. Still no idea what is a good dataset? refer to the original paper project page and check their input for each result, you will get some intuition there. Beware of the difference between taking pictures and extracting from videos!
+
 ### 4. A SUMMARY OF RENDERING WITH NSFF   
 Nsff provides additional dimensions for neural radiance rendering. The original project page did not provide a thorough discussion of extension of renderings. Though trivial, a summary table may help you better understand what’s going on about this model with a better visualization results.
 
